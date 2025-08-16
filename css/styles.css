@@ -19,7 +19,6 @@ img {
   display: block;
   object-fit: cover;
 }
-
 p,
 h1,
 h2,
@@ -35,7 +34,7 @@ ul {
   padding-left: 0;
 }
 .container {
-  max-width: 1158px;
+  width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -150,41 +149,8 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
-}
-
-@media screen and (min-resolution: 192dpi) {
-  .main-banner {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url("../images/people-office@2x.jpg");
-    max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .work-list,
-  .team-list,
-  .portfolio-list,
-  .footer-list,
-  .social-list,
-  .subcribe {
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 72px;
-    text-align: center;
-  }
-  .icon-box {
-    display: none;
-  }
-  .container: {
-    max-width: 288px;
-    padding: 0 16px;
-  }
 }
 
 .main-head {
