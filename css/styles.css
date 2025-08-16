@@ -148,7 +148,10 @@ header .container {
     padding: 24px 0 24px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-
+  .privacy-text {
+    display: inline-flex;
+    gap: 4px;
+  }
   .navigation::after {
     position: relative;
     content: "";
@@ -585,7 +588,7 @@ textarea::placeholder {
 }
 .checkbox-label {
   display: flex;
-  line-height: 1.17;
+  align-items: center;
   letter-spacing: 0.04em;
   font-weight: 400;
   font-size: 12px;
@@ -892,5 +895,314 @@ svg.team-icon-social {
 @media screen and (min-width: 1158px) {
   .team-list {
     gap: 24px;
+  }
+}
+
+/* portfolio */
+.portfolio-main {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+.portfolio {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+  margin-bottom: 72px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+.portfolio-list-item {
+  width: 100%;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.image-portfolio {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-text {
+  position: absolute;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #4d5ae5;
+}
+
+.portfolio-list-item:hover .portfolio-text {
+  transform: translateY(0%);
+}
+
+.our-work {
+  font-weight: 400;
+}
+.app-name {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+.apps {
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    gap: 72px 24px;
+  }
+  .portfolio-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .portfolio-list {
+    gap: 48px 24px;
+  }
+  .portfolio-list-item {
+    width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .portfolio-list-item {
+    box-shadow: none;
+  }
+
+  .portfolio-list-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
+}
+
+/* footer */
+
+.page-footer {
+  background-color: #2e2f42;
+  padding: 100px 0;
+}
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: #4d5ae5;
+  text-transform: uppercase;
+}
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+}
+.footer-text {
+  color: #f4f4fd;
+  max-width: 264px;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.social-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+}
+
+.social-icon-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+.social-icon-footer:hover,
+.social-icon-footer:focus {
+  background-color: #31d0aa;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-icon-social {
+  fill: #f4f4fd;
+}
+
+.media {
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.social-media-list {
+  display: flex;
+  gap: 16px;
+}
+.social-media-list-item {
+  width: 40px;
+  height: 40px;
+}
+
+.span-footer {
+  color: #f4f4fd;
+}
+.subcribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+}
+.subcribe-text {
+  margin-bottom: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.subcribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 288px;
+  gap: 16px;
+}
+.subcribe-input-box {
+  width: 264px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: inherit;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subcribe-input-box:hover,
+.subcribe-input-box:focus,
+.subcribe-input-box:active {
+  border: 2px solid rgb(77, 90, 229);
+  color: #fff;
+}
+.subcribe-input {
+  border-radius: 4px;
+  fill: none;
+  width: 264px;
+  height: 40px;
+  line-height: 2;
+  border: 1px solid #ffffff;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  color: #ffffff;
+  font-size: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+}
+::placeholder {
+  color: #ffffff;
+}
+.subcribe-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  min-width: 165px;
+  border: none;
+  height: 40px;
+
+  margin: 0 auto;
+
+  border-radius: 4px;
+}
+.subcribe-button:hover,
+:focus {
+  background-color: #404bbf;
+}
+.subcribe-icon {
+  margin-left: 16px;
+  fill: #ffffff;
+}
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .subcribe-form {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+  .social-list {
+    margin: 0;
+    align-items: normal;
+  }
+  .subcribe {
+    align-items: baseline;
+    margin-left: 108px;
+  }
+  .footer-social {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-left: 108px;
+    align-items: flex-start;
+  }
+  .footer-list {
+    align-items: normal;
+  }
+}
+@media screen and (min-width: 1158px) {
+  footer .container {
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  .subcribe {
+    margin-left: 80px;
+  }
+  .footer-social {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    margin-left: 0;
   }
 }
