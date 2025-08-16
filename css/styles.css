@@ -346,14 +346,19 @@ svg.social-mob {
   min-height: 432px;
   margin: 0 auto;
 }
+.main-banner-container {
+  margin: 0 auto;
+}
 .main-head {
   text-align: center;
   font-weight: 700;
   font-size: 36px;
   letter-spacing: 0.02em;
+  line-height: 40px;
   color: #ffffff;
   max-width: 216px;
-  margin: auto;
+  padding: 72px 0;
+  margin: 0 auto;
 }
 
 .button-order {
@@ -409,7 +414,7 @@ svg.social-mob {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   width: 288px;
   min-height: 623px;
   border-radius: 4px;
@@ -579,6 +584,7 @@ textarea::placeholder {
   margin-bottom: 24px;
 }
 .checkbox-label {
+  display: flex;
   line-height: 1.17;
   letter-spacing: 0.04em;
   font-weight: 400;
@@ -640,4 +646,65 @@ textarea::placeholder {
 .button-send:hover,
 :focus {
   background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    min-height: 584px;
+  }
+  .form {
+    width: 360px;
+  }
+  .main-banner {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      image-set(
+        "../images/hero/tab-hero.jpg" 1x,
+        "../images/hero/tab-hero@2x.jpg" 2x
+      );
+
+    max-width: 768px;
+    min-height: 436px;
+    margin: 0 auto;
+  }
+  .main-head {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    max-width: 496px;
+    padding: 36px 0;
+    padding-top: 112px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .form {
+    width: 360px;
+  }
+  .main-banner {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      image-set(
+        "../images/hero/desk-hero.jpg" 1x,
+        "../images/hero/desk-hero@2x.jpg" 2x
+      );
+
+    max-width: 1158px;
+    min-height: 600px;
+    margin: 0 auto;
+  }
+  .main-head {
+    padding: 48px 0;
+    padding-top: 188px;
+    margin: 0 auto;
+  }
 }
