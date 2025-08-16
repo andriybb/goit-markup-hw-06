@@ -40,7 +40,7 @@
             </li>
           </ul>
         </nav>
-        <address>
+        <address class="contacts">
           <ul class="contact">
             <li>
               <a href="mailto:info@devstudio.com" class="contact-info"
@@ -54,6 +54,82 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="burger-btn" data-menu-open>
+          <svg class="burger-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" data-menu>
+          <div class="container mobile-menu-container">
+            <button class="mobile-menu-close" data-menu-close>
+              <svg class="close-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="mobile-menu-nav">
+              <div class="navigation-list-mobile">
+                <a href="./index.html" content="Studio" class="navigation-mob"
+                  >Studio</a
+                >
+
+                <a
+                  href="./index.html"
+                  content="Portfolio"
+                  class="navigation-mob"
+                  >Portfolio</a
+                >
+
+                <a href="./index.html" content="Contacts" class="navigation-mob"
+                  >Contacts</a
+                >
+              </div>
+            </nav>
+            <address class="mobile-menu-address">
+              <ul class="contact-mob">
+                <li>
+                  <a href="mailto:info@devstudio.com" class="contact-info-mob"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:+110001111111" class="contact-info-mob"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <ul class="list-mob">
+              <li class="list-item-mob">
+                <a href="instagram.com" class="social-icon-mob">
+                  <svg class="social-mob" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-item-mob">
+                <a href="twitter.com" class="social-icon-mob">
+                  <svg class="social-mob" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-item-mob">
+                <a href="facebook.com" class="social-icon-mob">
+                  <svg class="social-mob" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="list-item-mob">
+                <a href="linkeid.com" class="social-icon-mob">
+                  <svg class="social-mob" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -67,7 +143,7 @@
         </div>
       </section>
       <!-- about us -->
-      <section class="work">
+      <section class="work hidden">
         <div class="container">
           <h2 class="visually-hidden">How We Work</h2>
           <ul class="work-list">
@@ -123,12 +199,15 @@
         </div>
       </section>
       <!-- work banner -->
-      <section class="our-team">
+      <section class="our-team hidden">
         <div class="container">
           <h2 class="teammates">Our team</h2>
           <ul class="team-list">
             <li class="team-members">
-              <img src="./images/mark.jpg" alt="image of Mark Guerrero" />
+              <img
+                srcset="./images/team/mark.jpg 1x, ./images/team/mark@2x.jpg 2x"
+                src="./images/team/mark.jpg 1x"
+                alt="image of Mark Guerrero" />
               <div class="member-name">
                 <h3 class="team-member">Mark Guerrero</h3>
                 <p class="our-work member">Product Designer</p>
@@ -165,7 +244,10 @@
               </div>
             </li>
             <li class="team-members">
-              <img src="./images/tom.jpg" alt="image of Tom Ford" />
+              <img
+                srcset="./images/team/tom.jpg 1x, ./images/team/tom@2x.jpg 2x"
+                src="./images/team/tom.jpg 1x"
+                alt="image of Tom Ford" />
               <div class="member-name">
                 <h3 class="team-member">Tom Ford</h3>
                 <p class="our-work member">Frontend Developer</p>
@@ -202,7 +284,13 @@
               </div>
             </li>
             <li class="team-members">
-              <img src="./images/camila.jpg" alt="image of Camila Garcia" />
+              <img
+                srcset="
+                  ./images/team/camila.jpg    1x,
+                  ./images/team/camila@2x.jpg 2x
+                "
+                src="./images/team/camila.jpg 1x"
+                alt="image of Camila Garcia" />
               <div class="member-name">
                 <h3 class="team-member">Camila Garcia</h3>
                 <p class="our-work member">Marketing</p>
@@ -239,7 +327,13 @@
               </div>
             </li>
             <li class="team-members">
-              <img src="./images/daniel.jpg" alt="image of Daniel Wilson" />
+              <img
+                srcset="
+                  ./images/team/daniel.jpg    1x,
+                  ./images/team/daniel@2x.jpg 2x
+                "
+                src="./images/team/daniel.jpg 1x"
+                alt="image of Daniel Wilson" />
               <div class="member-name">
                 <h3 class="team-member">Daniel Wilson</h3>
                 <p class="our-work member">UI Designer</p>
@@ -279,13 +373,36 @@
         </div>
       </section>
       <!-- portfolio -->
-      <section class="portfolio-main">
+      <section class="portfolio-main hidden">
         <div class="container portfolio-container">
           <h2 class="portfolio">Our Portfolio</h2>
           <ul class="portfolio-list">
             <li class="portfolio-list-item">
               <div class="image-portfolio">
-                <img src="./images/banking.jpg" alt="image of Banking App" />
+                <picture>
+                  <source
+                    media="(min-width: 1158px)"
+                    srcset="
+                      ./images/portfolio/desk/blue-menu.jpg    1x,
+                      ./images/portfolio/desk/blue-menu@2x.jpg 2x
+                    " />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/tab/blue-menu.jpg    1x,
+                      ./images/portfolio/tab/blue-menu@2x.jpg 2x
+                    " />
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/portfolio/mob/blue-menu.jpg    1x,
+                      ./images/portfolio/mob/blue-menu@2x.jpg 2x
+                    " />
+                  <img
+                    src="./images/portfolio/desk/blue-menu.jpg"
+                    alt="image of Banking App" />
+                </picture>
+
                 <p class="portfolio-text">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -379,7 +496,7 @@
       </section>
     </main>
     <!-- footer -->
-    <footer class="page-footer">
+    <footer class="page-footer hidden">
       <div class="container">
         <div class="footer-list">
           <a class="logo-footer" href="./index.html"
@@ -444,6 +561,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- modal  -->
     <div class="bachdrop" data-modal>
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close>
@@ -529,5 +648,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
