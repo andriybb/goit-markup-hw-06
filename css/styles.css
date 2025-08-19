@@ -876,6 +876,7 @@ work-banner */
 }
 .member {
   text-align: center;
+  margin-bottom: 8px;
 }
 .team-social-media-list {
   display: flex;
